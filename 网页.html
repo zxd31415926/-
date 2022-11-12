@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朱旭东的网页</title>
+    <link rel="stylesheet" href="sty.css">
+    <script>
+        //alert("请先登录注册");
+    </script>
+</head>
+
+<body>
+    <div class="pagehead">
+        <div class="logo"></div>
+        <div style="width: 100px;height: 100px;line-height: 0;color: #f0ec06;"><b>
+                <p>朱旭东</p></br>
+                <p>信息与软件</p></br>
+                <p>工程学院</p>
+
+            </b></div>
+        <div class="register"><br /><br /><a class="a" href="registering.html">登录/注册</a></div>
+
+    </div>
+    <div class="blank" style="top:0;left:0;background-color: black;"></div>
+
+    <div class="sidebar">
+
+
+        <div id="container">
+            <div class="content">
+
+
+                <div class="size1"></div>
+                <div style="width:30px ;"></div>
+                <a href="#1" style="text-align: center;top:30%">个人简介</a>
+
+            </div>
+            <div class="content">
+
+
+                <div class="size2"></div>
+                <div style="width:30px ;"></div>
+                <a href="#2" style="text-align: center;top:30%">九九乘法表</a>
+
+            </div>
+            <div class="content">
+
+
+                <div class="size3"></div>
+                <div style="width:30px ;"></div>
+                <a href="#3" style="text-align: center;top:30%">井字棋</a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="boddy">
+        <h1 id="1">个人简介</h1>
+        <hr />
+        <div style="height:30px ;"></div>
+        <p>学号：2022090912020<br><br>
+            电话：15823076842<br><br>
+            qq:2983653748<br><br>
+            邮箱:2983653748@qq.com<br><br>
+            毕业学校：重庆市南开中学校<br><br>
+            爱好：运动，看球，二次元，游戏，唱歌，看电影<br><br>
+            个人特长：<br><br>
+            1.有良好的社交能力，大方开朗<br><br>
+            2.喜欢运动，有上进心和恒心，能够吃苦<br><br>
+            3.中学阶段长期担任小组长职务，具有一定的组织能力，团队意识强<br><br></p>
+        <h1 id="2">九九乘法表</h1>
+        <hr />
+        <div>
+            <div style="height:30px ;"></div>
+            <script type="text/javascript">
+                var i = 1, j = 1, rate;
+                for (; i < 10;) {
+                    rate = i + "*" + j + "=" + (i * j);
+                    document.write('<div class="cfb" ><br/><span>');
+                    document.write(rate);
+                    document.write('</span></div>');
+                    j++;
+                    if (j > i) {
+                        document.write("<br/>");
+                        i++; j = 1;
+                    }
+                }
+            </script>
+        </div>
+        <h1 id="3">井字棋</h1>
+        <hr />
+        <div style="height:30px ;"></div>
+        <p>这是一个先手必不输的游戏，当电脑先手下在一个角，你永不会赢，欢迎挑战</p>
+        <script>
+           var m = 0, n = 1, tag = 0, p = 1, tag1, tag2;
+        for (; m < 3; m++) {
+            document.write("<div class='jzq'><span>&emsp;</span></div><div class='jzq' ><span>&emsp;</span></div><div class='jzq'><span>&emsp;</sapn></div><br/>");
+        }
+        var mat = document.getElementsByClassName("jzq");
+
+
+        function play1() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag1 = 1;
+                tag = 1;
+            }
+            if (tag1 == 2) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag2 = 2;
+            }
+
+            if (tag2 == 4) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 5) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag2 = 5;
+            }
+            if (tag1 == 6) {
+                this.innerHTML = 'O';
+                mat[7].innerHTML = 'X';
+                tag2 = 6;
+                tag1 = 1000;
+            }
+            if (tag2 == 8) {
+                this.innerHTML = 'O';
+                mat[5].innerHTML = 'X';
+                alert("you lost");
+            }
+        }
+        function play7() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag1 = 1;
+                tag = 1;
+            }
+            if (tag1 == 2) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag2 = 2;
+            }
+
+            if (tag2 == 4) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 5) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag2 = 5;
+            }
+            if (tag1 == 6) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag2 = 7;
+            }
+            if (tag2 == 11) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                alert("a draw");
+
+            }
+            if (tag2 == 12) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                alert("a draw");
+
+            }
+        }
+        function play2() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                tag1 = 5;
+                tag = 1;
+            }
+            if (tag1 == 1) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag2 = 1;
+            }
+
+            if (tag2 == 2) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 3) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag2 = 3;
+            }
+            if (tag1 == 4) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                tag2 = 4;
+            }
+            if (tag2 == 7) {
+                this.innerHTML = 'O';
+                mat[7].innerHTML = 'X';
+                alert("you lost");
+
+            }
+            if (tag1 == 6) {
+                this.innerHTML = 'O';
+                mat[5].innerHTML = 'X';
+                tag2 = 11;
+                tag1 = 8979;
+            }
+        }
+        function play8() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                tag1 = 5;
+                tag = 1;
+            }
+            if (tag1 == 1) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag2 = 1;
+            }
+
+            if (tag2 == 2) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 3) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag2 = 3;
+            }
+            if (tag1 == 4) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                tag2 = 4;
+            }
+            if (tag2 == 7) {
+                this.innerHTML = 'O';
+                mat[7].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 6) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                tag2 = 8;
+            }
+            if (tag2 == 6) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                alert("a draw");
+            }
+            if (tag2 == 10) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                alert("a draw");
+            }
+        }
+        function play3() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[8].innerHTML = 'X';
+                tag = 1;
+                tag1 = 6;
+            }
+
+            if (tag2 == 1) {
+                this.innerHTML = 'O';
+                mat[7].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 2) {
+                this.innerHTML = 'O';
+                mat[3].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 3) {
+                this.innerHTML = 'O';
+                mat[5].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 4) {
+                this.innerHTML = 'O';
+                mat[1].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 5) {
+                this.innerHTML = 'O';
+                mat[5].innerHTML = 'X';
+                alert("you lost");
+            }
+
+        }
+        function play4() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[2].innerHTML = 'X';
+                tag1 = 2;
+                tag = 1;
+            }
+            if (tag2 == 1) {
+                this.innerHTML = 'O';
+                mat[7].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 3) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 5) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 8) {
+                this.innerHTML = 'O';
+                mat[1].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 6) {
+                this.innerHTML = 'O';
+                mat[3].innerHTML = 'X';
+                tag2 = 10;
+                tag1 = 10000;
+            }
+        }
+        function play5() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag1 = 4;
+                tag = 1;
+            }
+            if (tag2 == 1) {
+                this.innerHTML = 'O';
+                mat[4].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 1) {
+                this.innerHTML = 'O';
+                mat[7].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag2 == 7) {
+                this.innerHTML = 'O';
+                mat[3].innerHTML = 'X';
+                alert("you lost");
+            }
+            if (tag1 == 6) {
+                this.innerHTML = 'O';
+                mat[1].innerHTML = 'X';
+                tag2 = 12;
+                tag1=987;
+            }
+        }
+        function play6() {
+            if (tag == 0) {
+                this.innerHTML = 'O';
+                mat[6].innerHTML = 'X';
+                tag1 = 4;
+                tag = 1;
+            }
+
+        }
+
+        mat[0].innerHTML = 'X';
+        mat[1].onclick = play1;
+        mat[2].onclick = play7;
+        mat[3].onclick = play2;
+        mat[4].onclick = play3;
+        mat[5].onclick = play4;
+        mat[6].onclick = play8;
+        mat[7].onclick = play5;
+        mat[8].onclick = play6;
+
+
+
+
+        </script>
+
+    </div>
+
+    <div class="pagefoot">
+        <p class="pfword">我们的面前是星辰大海</p>
+    </div>
+</body>
+
+</html>
